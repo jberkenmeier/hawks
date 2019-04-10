@@ -1,0 +1,102 @@
+html{
+    background-color:rgb(81, 40, 0);
+}
+.header{
+    border:solid 1px;
+    overflow: hidden;
+    height: 20%;
+    background-color: rgb(233, 160, 2);
+    padding: 20px;
+    text-align: center;
+}
+#logo{
+    float:left;
+    margin-top:15px;
+    width:30%;
+}
+#logo > img{
+    float:left;
+}
+#title{
+    color:rgb(81, 40, 0);
+    float:left;
+    width:33%;
+    font-size: 3em;
+}
+
+#nav{
+    text-align:right;
+    padding-top:8%;
+}
+#nav > a{
+    border:solid 1px;
+    border-radius: 8px;
+    background:white;
+    padding: 2px 2px;
+}
+
+h1{
+    color:rgb(81, 40, 0);
+    word-wrap: break-word;
+}
+
+a:link {
+    text-decoration: none;
+    color:rgb(81, 40, 0);
+}
+a:hover{
+    text-decoration:underline;
+}
+
+.first_row, .third_row{
+    -webkit-column-count: 2;
+    -moz-column-count: 2; 
+    column-count: 2;
+    -webkit-column-gap: 40px; 
+    -moz-column-gap: 40px; 
+    column-gap: 40px;
+    -webkit-column-rule: 4px double #512800;
+    -moz-column-rule: 4px double #512800;
+    column-rule: 4px double #512800;
+    height:25%;
+    background-color: rgb(233, 160, 2);
+    text-align:center;
+    border:solid;
+    margin-top:2.5%;
+
+}
+
+.second_row{
+    -webkit-column-count: 4; /* Chrome, Safari, Opera */
+    -moz-column-count: 4; /* Firefox */
+    column-count: 4;
+    -webkit-column-rule: 4px double #512800;
+    -moz-column-rule: 4px double #512800;
+    column-rule: 4px double #512800;
+    height:25%;
+    background-color: rgb(233, 160, 2);
+    text-align:center;
+    border:solid;
+    margin-top:2.5%;
+}
+
+#desc, #history, #spec, #docs, #manuals, #tutorials{
+   /* height:90%; */
+}
+/* #desc{
+    margin-right:.45%;
+}
+#spec, #docs, #manuals{
+    margin-right:.4%;
+}
+
+#spec, #docs, #manuals, #tutorials{
+    float:left;
+    border:solid 1px;
+    width:24.5%;
+    height:100%;
+    text-align:center;
+    margin-top:5px;
+} */
+
+
