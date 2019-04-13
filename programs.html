@@ -3,7 +3,7 @@
     <title>Hawks</title>
 </head>
 
-<body>
+<body class = body>
     
     <div class="header">
         <div id="logo">
@@ -19,14 +19,36 @@
     </div>
     <div class="program1">
         <h1>Program 1:</h1>
-        <div class = "eggs">
-            <p>int i = 0; </p>
-                <p>while (i < 50){ </p>
-                    <p id = indent>print i;</p>
-                        <p id = indent>i++;</p>
-                        <p>}</p>
-            
-            </div>
+        <div class = "programspace">
+            <p><span class = package>package</span> main</p>
+            <p><span class = import>import</span> <span class = string>"fmt"</span></p>
+            <p> <span class = var>var</span> p = fmt.Println</p>
+            <p>func main() {</p>
+                <p id = indent><span class = var>var</span> reverse [4]<span class = variable>string</span></p>
+                <p id = indent><span class = var>var</span> test = <span class = string>"test"</span></p>
+                <p id = indent><span class = var>var</span> j = len(test)</p>
+                <p id = indent><span class = for>for </span> i := 0; i < len(test); i++ { </p>
+                        <p id = indent2> p(<span class = string>"Index of: "</span> , i, <span class = variable>string</span>(test[i]))</p>
+                        <p id = indent2> j--</p>
+                        <p id = indent2> reverse[j] = <span class = variable>string</span>(test[i])</p>
+                        <p id = indent> }</p>
+                        <p id = indent> p()</p>
+                <p id = indent> <span class = for>for </span> j := 0; j < len(reverse); j++ {</p>
+                        <p id = indent2> p(<span class = string>"Index of: "</span>, j, <span class = variable>string</span>(reverse[j]))</p>
+                <p id = indent> }</p>
+            <p>}</p>
+            <p></p>
+            <p class = bigger>Output:</p>
+            <p>Index of:  0 t</p>
+            <p>Index of:  1 e</p>
+            <p>Index of:  2 s</p>
+            <p>Index of:  3 t</p>
+            <p>--------------</p>        
+            <p>Index at:  0 t</p>
+            <p>Index at:  1 s</p>
+            <p>Index at:  2 e</p>
+            <p>Index at:  3 t</p>        
+        </div>
             
             
             
