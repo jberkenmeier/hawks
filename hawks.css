@@ -48,7 +48,20 @@ a:hover{
     text-decoration:underline;
 }
 
-.first_row, .third_row{
+.first_row {
+    width: 90%;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display:block;
+    margin: auto;
+    height:auto;
+    background-color: rgb(233, 160, 2);
+    text-align:center;
+    border:solid;
+    margin-top:2.5%;
+}
+
+.third_row {
     -webkit-column-count: 2;
     -moz-column-count: 2; 
     column-count: 2;
@@ -58,7 +71,7 @@ a:hover{
     -webkit-column-rule: 4px double #512800;
     -moz-column-rule: 4px double #512800;
     column-rule: 4px double #512800;
-    height:25%;
+    height:auto;
     background-color: rgb(233, 160, 2);
     text-align:center;
     border:solid;
@@ -98,5 +111,27 @@ a:hover{
     text-align:center;
     margin-top:5px;
 } */
+.indent2{
+    text-align: left;
+    text-indent: 60px;
+}
+.text{
+    padding: 5px;
+    text-align: left;
+}
+.indent1{
+    text-indent: 60px;
+    margin: 1px;
+    padding: 1px;
 
+}
+ul{
+    margin-top: -5px;
+    padding: 5px;
+    text-align: left;
+    margin: auto;
+    align-self: center;
+   width: 10%;
+
+}
 

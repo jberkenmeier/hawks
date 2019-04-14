@@ -1,4 +1,4 @@
-.program1{
+.program{
     background-color: rgb(233, 160, 2);
   
     margin-left: 30px;
@@ -11,7 +11,7 @@
     font-family: 'Courier Header', Courier, monospace;
     border: solid 1px;
     border-color: black;
-    width: 40%;
+    width: 50%;
     padding: 10px;
     background-color: rgba(194, 189, 189, 0.849);
     color: rgba(20, 20, 20, 0.774);
@@ -51,6 +51,9 @@
 .var{
     color: rgb(177, 42, 42);
 }
+.func{
+    color: rgb(177, 42, 42);
+}
 .import{
     color: rgb(177, 42, 42);
 }
@@ -65,7 +68,15 @@
 }
 .for{
     color: rgb(177, 42, 42);
-
+}
+.if{
+    color: rgb(177, 42, 42);
+}
+.return{
+    color: rgb(177, 42, 42);
+}
+.else{
+    color: rgb(177, 42, 42);
 }
 .bigger{
     font-size: 30px;

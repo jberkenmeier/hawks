@@ -17,13 +17,31 @@
             <a href="programs.html">Programs</a>
         </div>
     </div>
-    <div class="program1">
-        <h1>Program 1:</h1>
+    <div class = program> 
+            <h1>Program 1: Hello World</h1>
+            <div class = programspace>
+                    <p><span class = package>package</span> main</p>
+                    <p><span class = import>import</span> <span class = string>"fmt"</span></p>
+                    <p> <span class = var>var</span> p = fmt.Println</p>
+                    <p><span class = func>func</span> main() {</p>
+                        <p id = indent> p("Hello World!")</p>
+                    
+                    <p>}</p>
+                    <p></p>
+                    <p class = bigger>Output:</p>
+                    <p>Hello World!</p>
+                    
+    
+            </div>
+    
+        </div>
+    <div class="program">
+        <h1>Program 2: Reverse String</h1>
         <div class = "programspace">
             <p><span class = package>package</span> main</p>
             <p><span class = import>import</span> <span class = string>"fmt"</span></p>
             <p> <span class = var>var</span> p = fmt.Println</p>
-            <p>func main() {</p>
+            <p><span class = func>func</span> main() {</p>
                 <p id = indent><span class = var>var</span> reverse [4]<span class = variable>string</span></p>
                 <p id = indent><span class = var>var</span> test = <span class = string>"test"</span></p>
                 <p id = indent><span class = var>var</span> j = len(test)</p>
@@ -49,14 +67,72 @@
             <p>Index at:  2 e</p>
             <p>Index at:  3 t</p>        
         </div>
-            
-            
-            
-                
-            
-        
     </div>
-
-   
-
+    <div class="program">
+            <h1>Program 3: User Input/Odd or Even</h1>
+            <div class = "programspace">
+                <p><span class = package>package</span> main</p>
+                <p><span class = import>import</span> <span class = string>"fmt"</span></p>
+                <p><span class = func>func</span> main() {</p>
+                    <p id = indent>fmt.Print(<span class = string>"Enter a number: "</span>)</p>
+                    <p id = indent> <span class = var>var </span>num <span class = variable>int</span></p>
+                    <p id = indent> fmt.Scanln(&num)</p>
+                    <p id = indent><span class = if>if </span>num%2 == 0 {</p>
+                        <p id = indent2>fmt.Println(num, <span class = string>"is even"</span>)</p>
+                    <p id = indent>} <span class = else>else </span>{</p>
+                        <p id = indent2>fmt.Println(num, <span class = string>"is odd"</span>)</p>
+                    <p id = indent>}</p>
+                <p>}</p>
+            </div>
+    </div>
+    <div class="program">
+            <h1>Program 4: Writitng to a file</h1>
+            <div class = "programspace">
+                    <p><span class = package>package</span> main</p>
+                    <p><span class = import>import</span> (</p>
+                        <p id = indent><span class = string>"bufio"</span></p>
+                        <p id = indent><span class = string>"fmt"</span></p>
+                        <p id = indent><span class = string>"os"</span></p>
+                        <p id = indent><span class = string>"strings"</span></p>
+                    <p>)</p>
+                    <p><span class = func>func</span> main() {</p>
+                        <p id = indent>f, _ := os.Create(<span class = string>"output.txt"</span>)</p>
+                        <p id = indent>read := bufio.NewReader(os.Stdin)</p>
+                        <p id = indent>fmt.Println(<span class = string>"Type what you would like to go in output.txt"</span>)</p>
+                        <p id = indent>text, _ := read.ReadString(<span class = variable>'\n'</span>)</p>
+                        <p id = indent>text = strings.Replace(text, <span class = string>"</span><span class = variable>\n</span><span class = string>"</span>
+                            , <span class = string>""</span>, -1)</p>
+                        <p id = indent>filetext := []<span class = variable> byte</span> (text)</p>
+                        <p id = indent>f.Write(filetext)</p>
+                        <p>}</p>
+            </div>
+    </div>
+    <div class="program">
+            <h1>Program 5: Sum</h1>
+            <div class = "programspace">
+                <p><span class = package>package</span> main</p>
+                <p><span class = import>import</span> (</p>
+                    <p id = indent><span class = string>"fmt"</span></p>
+                <p>)</p>
+                <p><span class = func>func</span> sum() <span class = func>func</span>()<span class = variable> int</span> {</p>
+                    <p id = indent>sum := 0</p>
+                    <p id = indent>iteration := 0</p>
+                    <p id = indent><span class = return>return </span><span class = func>func</span>() 
+                        <span class = variable>int </span>{</p>
+                        <p id = indent2>sum = sum + iteration </p>
+                        <p id = indent2>iteration++ </p>
+                        <p id = indent2><span class = return>return </span>sum </p>
+                    <p id = indent>}</p>
+                <p>}</p>
+                <p><span class = func>func</span> main() {</p>
+                    <p id = indent>result := 0 </p>
+                    <p id = indent>sum := sum()</p>
+                    <p id = indent><span class = for>for </span>i := 0; i <= 5; i++ {</p>
+                        <p id = indent2>result = sum()</p>
+                    <p id = indent>}</p>
+                    <p id = indent>fmt.Println(result)</p>
+                <p>}</p>
+            </div>
+    </div>
+    
 </body>
