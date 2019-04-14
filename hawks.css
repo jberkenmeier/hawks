@@ -131,7 +131,29 @@ ul{
     text-align: left;
     margin: auto;
     align-self: center;
-   width: 10%;
+    width: 15%;
+    display: inline-block;
 
 }
+.descriptionlist{
+    
+    padding: 5px;
+    text-align: left;
+    margin: auto;
+    width: 40%;
+    display: inline-block;
 
+}
+table,th,td{
+    padding: 3px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    
+}
+.divtable{
+    padding: 5px;
+
+}
+.newline{
+    text-align: center;
+}

@@ -23,7 +23,36 @@
                 <h1>Description</h1>
                 <p class = text>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    
+                    Designed by the engineers at Google, Go is a compiled, statically typed, language. 
+                    Similar to C, it was designed to improve simplicity, and safety as opposed to other 
+                    languages such as C. While Go has no objects or inheritance, you can use interfaces 
+                    to declare a general set of methods for multiple files. This makes a semi form of 
+                    inheritance, but not true inheritance. These all share common APIs. At the moment, Go's, 
+                    most commonly used inside of Google. Outside of Google, the main usage falls under 
+                    backend systems. Wrting HTTP and TCP severs in go provide a fast implementation which 
+                    adds to its popularity. It consists of a Syntax environment that includes:
+                </p>
+                <ul class = descriptionlist>
+                    <li>Optional variable declaration and initialization through type inference. I.E. x := 0</li>
+                    <li>Fast compilation time: No use of interpreters.</li>
+                    <li>Remote package management.</li>
+                </ul>
+                <p class = text> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Go's memory model lays out the conditions under which reads of a variable in one
+                    goroutine can be guranteed to observe values produced by writes to the same variable
+                    in a different goroutine. The goroutine is a lightweight thread managed by the Go runtime.
+                    Goroutines run in the same address space, this means the access to shared memory must be
+                    synchronized. Having a package sync inplementation provides basic synchronization primitives
+                    such as mutual exclusion locks. 
+                </p>
+                <p class = text>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Go uses a package system which can be loosely compared to java's API system. Packages can 
+                    be referenced by using the package name followed by the method: "io.Reader". 
+                    The user can access remote repositories by using the "go get" command. Developers are 
+                    envouraged to use a base path for package development. This reduces the likelihood of name 
+                    collision when importing packages.  
                 </p>
             </div>
     </div>
@@ -54,13 +83,16 @@
                 into a functional language. At the time of Go’s creation, the two main languages to write 
                 servers were C++ and java. Go was designed to reduce the repetition of these languages, the 
                 idea was to have efficiency, fluidity, and safety in a single language. The list below contains 
-                examples of famous open source projects that were programmed in Go:
+                examples of well-known companies whose applications were either completely, or partially programmed in Go:
             </p>
             <ul>
+                <li>Facebook</li>
+                <li>The New York Times</li>
+                <li>Sound Cloud</li>
+                <li>Uber</li>
+                <li>Drop Box</li>
+                <li>Twitch</li>
                 <li>Docker</li>
-                <li>Kubernetes</li>
-                <li>Etcd and Fleet</li>
-                <li>Deis</li>
             </ul>
         </div>
     </div>
@@ -90,8 +122,76 @@
 
     <div class="first_row">
        
-        <h1>Translators</h1>
-    
+        <h1>Tabular Comparisons</h1>
+        <div class = divtable>
+            <table style="width:100%">
+                <tr>
+                    <th>Features</th>
+                    <th>Go</th> 
+                    <th>C++</th>
+                    <th>C</td>
+                </tr>
+                <tr>
+                    <th>Generics</th>
+                    <td>Not yet(Next Version)</td> 
+                    <td>Has Generics</td>
+                    <td>No Generics</td>
+                </tr>
+                <tr>
+                    <th>Typing</th>
+                    <td>Statically and Srongly Typed. Can determine
+                        type implicitly.
+                    </td> 
+                    <td>Static Typing. Type must be explicitly 
+                        declared.
+                    </td>
+                    <td>Statically Typed. Type must be explicitly 
+                        declared
+                    </td>
+                </tr>
+                <tr>
+                    <th>Logic</th>
+                    <td>Only comparison operators, no Boolean 
+                            value
+                    </td> 
+                    <td>Has boolean values</td>
+                    <td>Has no Boolean by default, any nonzero 
+                        equates to true. Can include booleans.
+                    </td>
+                </tr>
+                <tr>
+                    <th>Bitwise Operators</th>
+                    <td>Contains bitwise operators</td> 
+                    <td>Contains bitwise operators</td>
+                    <td>Contains bitwise operators</td>
+                </tr>
+                <tr>
+                    <th>Operator Overloading</th>
+                    <td>Does not support overloading operators</td> 
+                    <td>Supports operator overloading</td>
+                    <td>Does not support operator overloading</td>
+                </tr>
+                <tr>
+                    <th>Objects</th>
+                    <td>Has interfaces to mimic objects</td> 
+                    <td>Has structs, which is also a class</td>
+                    <td>Has structs, but they are just aggregate data, no methods</td>
+                </tr>
+                <tr>
+                    <th>Main Use</th>
+                    <td>Large software systems inside of Google</td> 
+                    <td>Used in many embedded systems and hardware programming</td>
+                    <td>Used in microcontrollers and in Operating Systems</td>
+                </tr>
+                <tr>
+                    <th>Error Handling</th>
+                    <td>Not yet (Next Version)</td> 
+                    <td>Exceptions are included. Turn exceptions on or off</td>
+                    <td>Does not have error handling</td>
+                </tr>
+                
+            </table>
+        </div>
     </div>
 
     <div class="first_row">
