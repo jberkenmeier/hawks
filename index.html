@@ -23,37 +23,27 @@
                 <h1>Description</h1>
                 <p class = text>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    Designed by the engineers at Google, Go is a compiled, statically typed, language. 
-                    Similar to C, it was designed to improve simplicity, and safety as opposed to other 
-                    languages such as C. While Go has no objects or inheritance, you can use interfaces 
-                    to declare a general set of methods for multiple files. This makes a semi form of 
-                    inheritance, but not true inheritance. These all share common APIs. At the moment, Go's, 
-                    most commonly used inside of Google. Outside of Google, the main usage falls under 
-                    backend systems. Wrting HTTP and TCP severs in go provide a fast implementation which 
-                    adds to its popularity. It consists of a Syntax environment that includes:
-                </p>
-                <ul class = descriptionlist>
-                    <li>Optional variable declaration and initialization through type inference. I.E. x := 0</li>
-                    <li>Fast compilation time: No use of interpreters.</li>
-                    <li>Remote package management.</li>
-                </ul>
-                <p class = text> 
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    Go's memory model lays out the conditions under which reads of a variable in one
-                    goroutine can be guranteed to observe values produced by writes to the same variable
-                    in a different goroutine. The goroutine is a lightweight thread managed by the Go runtime.
-                    Goroutines run in the same address space, this means the access to shared memory must be
-                    synchronized. Having a package sync inplementation provides basic synchronization primitives
-                    such as mutual exclusion locks. 
-                </p>
-                <p class = text>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    Go uses a package system which can be loosely compared to java's API system. Packages can 
-                    be referenced by using the package name followed by the method: "io.Reader". 
-                    The user can access remote repositories by using the "go get" command. Developers are 
-                    envouraged to use a base path for package development. This reduces the likelihood of name 
-                    collision when importing packages.  
-                </p>
+                    Go (often referred to as Golang) is a statically typed, compiled programming language 
+                    designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson. Go is syntactically 
+                    similar to C, but with memory safety, garbage collection, structural typing, and CSP-style concurrency.
+
+                    There are two major implementations:
+
+                    Google's self-hosting compiler toolchain targeting multiple operating systems, mobile devices, and WebAssembly.
+                    gccgo, a GCC frontend.
+                    A third compiler, GopherJS, compiles Go to JavaScript for front-end web development.
+                    </p>[Source Wikipedia]
+                    <p class = text>Go removes all of these obstacles like safety, speed, and ease of programming </p>
+                    <p class ="text">Fast results:	It works like an interpreted language because of the fast compilation. You'll not notice that 
+                            it's compiling. You'll think that as if you're working in an interpreted language like Ruby.</p>
+                    <p class = "text">Safe: Strongly and statically typed and garbage collected. Strongly typed means: You can't pass any type of 
+                            data everywhere. You need to be explicit. Statically typed means: Compiler knows the type of every variable. 
+                            In Go there are no implicit type conversions, for example, uint8 and uint16 are different types (except in some cases).</p>
+                    <p class="text">Easy to work with: It's concise, explicit and easy to read.</p>
+                    
+                    <p class= "text">Modern: Built-in support in the language itself for multi-core networked distributed applications and more.</p>
+                        [Source: https://blog.learngoprogramming.com/about-go-language-an-overview-f0bee143597c]<br>
+                
             </div>
     </div>
 
@@ -100,24 +90,28 @@
     <div class="first_row">
            
         <h1>Specification</h1>
-            
+        <a href = "https://golang.org/ref/spec">Specs</a>
     </div>
 
     <div class="first_row">
             
         <h1>Documentation</h1>
-            
+        <a href = "https://golang.org/doc/">Golang Documentation</a>     
     </div>
 
     <div class="first_row">
            
         <h1>Manuals</h1>
-        <a href = "https://golang.org/"> Manual1</a> 
+        <a href = "https://golang.org/">Manual1</a> 
             
     </div>
     <div class="first_row">
            
-            <h1>Tutorials</h1>
+        <h1>Tutorials</h1>
+        <a href = "https://www.tutorialspoint.com/go/">Tutorial</a><br>
+        <a href = "https://tour.golang.org/welcome/1"> GoLang Tutorial 1</a> <br>
+        <a href = "https://stackify.com/learn-go-tutorials/"> GoLang Tutorial 2</a><br>
+        <a href = "https://golangbot.com/"> GoLang Tutorial 3</a><br>
     </div>
 
     <div class="first_row">
@@ -198,8 +192,9 @@
 
         <h1>Installation Instructions</h1>
         <p class = text> 
-            To install the Go compiler, go to the following link: <a href = https://golang.org/doc/install>Golang Installation</a>. This will walk you through 
-            the installation for a compiler for Go. You can install cgo to translate Go into C. Choose the compiler that matches your operating system. 
+            To install the Go compiler, go to the following link: <a href = "https://golang.org/doc/install">Golang Installation</a>. This will walk you through 
+            the installation for a compiler for Go. You can install cgo to translate Go into C. Choose the compiler that matches your operating system. For information
+            on building and running programs, please check out the programs page. It contains information on how to build and run as well as sample go programs.
         </p>
     </div>
    
