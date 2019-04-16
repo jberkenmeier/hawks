@@ -93,24 +93,6 @@ a:hover{
     margin-top:2.5%;
 }
 
-#desc, #history, #spec, #docs, #manuals, #tutorials{
-   /* height:90%; */
-}
-/* #desc{
-    margin-right:.45%;
-}
-#spec, #docs, #manuals{
-    margin-right:.4%;
-}
-
-#spec, #docs, #manuals, #tutorials{
-    float:left;
-    border:solid 1px;
-    width:24.5%;
-    height:100%;
-    text-align:center;
-    margin-top:5px;
-} */
 .indent2{
     text-align: left;
     text-indent: 60px;

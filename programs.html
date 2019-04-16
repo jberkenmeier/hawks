@@ -163,5 +163,62 @@
                 <p>15</p>
             </div>
     </div>
+
+    <div class = "program">
+        <h1>Program 6: Compute Powers</h1>
+        <h2>Contributor: Josh Berkenmeier</h2>
+
+
+        <div class = "programspace">
+            <p><span class = "package">package</span> main</p>
+            <p><span class = "import">import</span> (</p>
+                <p id = "indent"><span class = "string">"fmt"</span></p>
+            <p>)</p>
+            <p><span class = "func">func</span> computePower(x int, y int) int  {</p>
+                <p id = "indent">sum := 1</p>
+                <p id = "indent"><span class = "for">for </span>i := 0; i < y; i++ {</p>
+                    <p id = "indent2"> sum *= x</p>
+                    <p id = "indent">}</p>
+                    <p id = "indent">return sum</p>
+            <p>}</p>
+            <p><span class = "func">func</span> main() {</p>
+                <p id = "indent">fmt.Println(computePower(2, 0))</p>
+                <p id = "indent">fmt.Println(computePower(2, 6))</p>
+            <p>}</p>
+
+            <p class ="bigger">Output:</p>
+            <p>1</p>
+            <p>64</p>
+        </div>
+    </div>
     
+    <div class = "program">
+        <h1>Program 6: Recursively Compute Powers</h1>
+        <h2>Contributor: Josh Berkenmeier</h2>
+
+
+        <div class = "programspace">
+            <p><span class = "package">package</span> main</p>
+            <p><span class = "import">import</span> (</p>
+                <p id = "indent"><span class = "string">"fmt"</span></p>
+            <p>)</p>
+            <p><span class = "func">func</span> recursivePower(x int, y int) int  {</p>
+                <p id = "indent">if y < 1 {</p>
+                    <p id = "indent2"> return 1</p>
+                <p id = "indent">} else {</p>
+                    <p id = "indent2">return x * recursivePower(x, y-1)</p>
+                    <p id = "indent">}</p>
+            <p>}</p>
+            <p><span class = "func">func</span> main() {</p>
+                <p id = "indent">fmt.Println(recursivePower(2, 0))</p>
+                <p id = "indent">fmt.Println(recursivePower(2, 6))</p>
+            <p>}</p>
+
+            <p class ="bigger">Output:</p>
+            <p>1</p>
+            <p>64</p>
+        </div>
+    </div>
+
+
 </body>
