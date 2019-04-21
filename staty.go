@@ -40,15 +40,16 @@ func printer(c chan int) {
  This function will do the scanning of words and print the statistics associated with it.
 */
 func scanWords(c chan int) {
-	var linecount = 0
+	var wordcount = 0
 	file, _ := os.Open("alice.txt")
 	defer file.Close()
 	scanner := bufio.NewScanner(file)
+	scanner.Split(bufio.ScanWords)
 	for scanner.Scan() {
-		linecount++
+		wordcount++
 	}
-	p("LineCount: ")
-	c <- linecount
+	p("WordCount: ")
+	c <- wordcount
 
 }
 
