@@ -20,7 +20,7 @@ func main() {
 	//the scanning of words, characters, and lines running at the same time
 
 	go scanWords(c)
-	//go scanCharacters(c)
+	go scanCharacters(c)
 	go scanLines(c)
 	go printer(c)
 	for {
@@ -55,11 +55,20 @@ func scanWords(c chan int) {
 /*
  This function will do the scanning of characters and print the statistics associated with it.
 */
-/*func scanCharacters(c chan string) {
-	for x := 0; x <= 100; x++ {
-		c <- "characters"
+func scanCharacters(c chan int) {
+	var charcount = 0
+	file, _ := os.Open("alice.txt")
+	defer file.Close()
+	scanner := bufio.NewScanner(file)
+	scanner.Split(bufio.ScanBytes)
+	for scanner.Scan() {
+		p("hello?")
+		charcount++
+		scanner.Text()
 	}
-}/*
+	p("CharacterCount: ")
+	c <- charcount
+}
 
 /*
  This function will do the scanning of lines and print the statistics associated with it.
@@ -74,6 +83,5 @@ func scanLines(c chan int) {
 	}
 	p("LineCount: ")
 	c <- linecount
-
 }
 
