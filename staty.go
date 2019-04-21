@@ -32,7 +32,7 @@ func printer(c chan int) {
 	for {
 		msg := <-c
 		fmt.Println(msg)
-		time.Sleep(1100)
+		time.Sleep(1)
 	}
 }
 
@@ -62,9 +62,7 @@ func scanCharacters(c chan int) {
 	scanner := bufio.NewScanner(file)
 	scanner.Split(bufio.ScanBytes)
 	for scanner.Scan() {
-		p("hello?")
 		charcount++
-		scanner.Text()
 	}
 	p("CharacterCount: ")
 	c <- charcount
