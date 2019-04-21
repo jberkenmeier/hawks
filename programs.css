@@ -51,6 +51,9 @@ html{
 #indent2{
     text-indent: 60px;
 }
+#indent3{
+    text-indent: 90px;
+}
 .var{
     color: rgb(177, 42, 42);
 }

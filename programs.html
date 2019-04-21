@@ -163,5 +163,119 @@
                 <p>15</p>
             </div>
     </div>
+
+    <div class = "program">
+        <h1>Program 6: Compute Powers</h1>
+        <h2>Contributor: Josh Berkenmeier</h2>
+
+
+        <div class = "programspace">
+            <p><span class = "package">package</span> main</p>
+            <p><span class = "import">import</span> (</p>
+                <p id = "indent"><span class = "string">"fmt"</span></p>
+            <p>)</p>
+            <p><span class = "func">func</span> computePower(x int, y int) int  {</p>
+                <p id = "indent">sum := 1</p>
+                <p id = "indent"><span class = "for">for </span>i := 0; i < y; i++ {</p>
+                    <p id = "indent2"> sum *= x</p>
+                    <p id = "indent">}</p>
+                    <p id = "indent">return sum</p>
+            <p>}</p>
+            <p><span class = "func">func</span> main() {</p>
+                <p id = "indent">fmt.Println(computePower(2, 0))</p>
+                <p id = "indent">fmt.Println(computePower(2, 6))</p>
+            <p>}</p>
+
+            <p class ="bigger">Output:</p>
+            <p>1</p>
+            <p>64</p>
+        </div>
+    </div>
     
+    <div class = "program">
+        <h1>Program 7: Recursively Compute Powers</h1>
+        <h2>Contributor: Josh Berkenmeier</h2>
+
+
+        <div class = "programspace">
+            <p><span class = "package">package</span> main</p>
+            <p><span class = "import">import</span> (</p>
+                <p id = "indent"><span class = "string">"fmt"</span></p>
+            <p>)</p>
+            <p><span class = "func">func</span> recursivePower(x int, y int) int  {</p>
+                <p id = "indent">if y < 1 {</p>
+                    <p id = "indent2"> return 1</p>
+                <p id = "indent">} else {</p>
+                    <p id = "indent2">return x * recursivePower(x, y-1)</p>
+                    <p id = "indent">}</p>
+            <p>}</p>
+            <p><span class = "func">func</span> main() {</p>
+                <p id = "indent">fmt.Println(recursivePower(2, 0))</p>
+                <p id = "indent">fmt.Println(recursivePower(2, 6))</p>
+            <p>}</p>
+
+            <p class ="bigger">Output:</p>
+            <p>1</p>
+            <p>64</p>
+        </div>
+    </div>
+    <div class = program>
+        <h1>Program 8: Decimal to Hexadecimal Converter</h1>
+        <h2>Contributor: Brandon Burr</h2>
+        <div class = programspace>
+            <p><span class = "package">package</span> main</p>
+            <p><span class = "import">import</span> (</p>
+                <p id = "indent"><span class = "fmt">"fmt"</span></p>
+            <p>)</p>
+            <p> <span class = var>var</span> p = fmt.Println</p>
+            <p> <span class = var>var</span> print = fmt.Print</p>
+            <p><span class = "func">func</span> hex(n <span class = variable>int</span>) {</p>
+                <p id = indent><span class = var>var</span> temp, number, count <span class = variable>int</span></p>
+                <p id = indent>number = n</p>
+                <p id = indent><span class = var>var </span>reverseHex [8]<span class = variable>int</span></p>
+                <p id = indent>count = 0</p>
+                <p id = indent><span class =for>for</span> i:=0; number>0; i++ {</p>
+                    <p id = indent2>temp = number % 16</p>
+                    <p id = indent2>reverseHex[i] = temp</p>
+                    <p id = indent2>number = number/16</p>
+                    <p id = indent2>count++</p>
+                <p id = indent>}</p>
+                <p id = indent>hexarray := <span class = func>make</span>([]<span class = variable>int</span>, count)</p>
+                <p id = indent>count = 0</p>
+                <p id = indent>print(<span class = string>"Hexidecimal Equivalent: 0x"</span>)</p>
+                <p id = indent><span class = for>for</span> j:= <span class = func>len</span>(hexarray)-1; j>= 0; j-- {</p>
+                    <p id = indent2>hexarray[count] = reverseHex[j]</p>
+                    <p id = indent2><span class = if>if</span>(hexarray[count] == 10){</p>
+                        <p id = indent3>print(<span class = string>"a"</span>)</p>
+                    <p id = indent2>}<span class = if>else if</span>(hexarray[count] == 11){</p>
+                        <p id = indent3>print(<span class = string>"b"</span>)</p>
+                    <p id = indent2>}<span class = if>else if</span>(hexarray[count] == 12){</p>
+                        <p id = indent3>print(<span class = string>"c"</span>)</p>
+                    <p id = indent2>}<span class = if>else if</span>(hexarray[count] == 13){</p>
+                        <p id = indent3>print(<span class = string>"d"</span>)</p>
+                    <p id = indent2>}<span class = if>else if</span>(hexarray[count] == 14){</p>
+                        <p id = indent3>print(<span class = string>"e"</span>)</p>
+                    <p id = indent2>}<span class = if>else if</span>(hexarray[count] == 15){</p>
+                        <p id = indent3>print(<span class = string>"f"</span>)</p>
+                    <p id = indent2>}<span class = if>else</span>{</p>
+                        <p id = indent3> print(hexarray[count])</p>
+                    <p id = indent2>}</p>
+                <p id = indent>}</p>
+                <p id = indent>p()</p>
+            <p>}</p>
+            <p><span class = func>func</span> main() {</p>
+                <p id = indent><span class = for>for</span>{</p>
+                    <p id = indent2><span class = var>var</span> i <span class = variable>int</span></p>
+                    <p id = indent2>print(<span class = string>"Enter an integer value: "</span></p>
+                    <p id = indent2>fmt.Scanln(&i)</p>
+                    <p id = indent2>hex(i)</p>
+                <p id = indent>}</p>
+            <p>}</p>
+            <p></p>
+            <p class = bigger>input: 12345678</p>
+            <p>------------------------------</p>
+            <p class = bigger>Output: 0xbc614e</p>
+        </div>
+    </div>    
+
 </body>
