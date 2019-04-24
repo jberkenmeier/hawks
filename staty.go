@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 	"time"
+	"strings"
 )
 
 var p = fmt.Print
@@ -22,6 +23,9 @@ func main() {
 	go scanWords(c)
 	go scanCharacters(c)
 	go scanLines(c)
+	go scanWordLengths(c)
+	go scanAvgWordLength(c)
+	go scanLetterCount(c)
 	go printer(c)
 	for {
 
@@ -84,3 +88,55 @@ func scanLines(c chan int) {
 	c <- linecount
 }
 
+func scanWordLengths(c chan int){
+	var wordLength [24]String
+	file, _ := os.Open("alice.txt")
+	defer file.Close()
+	scanner := bufio.NewScanner(file)
+	scanner.Split(bufio.ScanWords)
+	for scanner.Scan() {
+		if len(scanner.Text()) < 23{
+			wordLength[scanner.Text()]++
+		}else{
+			wordLength[23]++
+		}
+	}
+	p("WordLengths: ")
+	c <- wordLength
+}
+
+func scanAvgWordLength(c chan int){
+	var words float64 = 0.0
+	var total float64 = 0.0
+	var count float64 = 0.0
+	file, _ := os.Open("alice.txt")
+	defer file.Close()
+	scanner := bufio.NewScanner(file)
+	scanner.Split(bufio.ScanWords)
+	for scanner.Scan() {
+		words += float64(len(scanner.Text()))
+		total++
+	}
+	count = words/total
+	p("Average Word Lengths: ")
+	c <- count
+}
+
+
+func scanLetterCount(c chan int){
+	var letters [24]int
+	var line string
+	var chars byte 
+	file, _ := os.Open("alice.txt")
+	defer file.Close()
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		line = strings.ToLower(scanner.Text())
+		for i, l := range line{
+			i++
+			letters[byte(l) - 'a']++
+		}
+	}
+	p("Letter Count: ")
+	c <- letters
+}
